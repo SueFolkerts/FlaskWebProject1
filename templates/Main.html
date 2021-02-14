@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Random Art</title>
+    <style>
+        h1 {
+            text-align:center;
+        }
+        .side {
+            float: left;
+            width: 9em;
+            margin: 1em;
+        }
+        .Heads {
+            border: 5px solid black;
+            float: left;
+/*            top: 10em;
+            left: 12em;
+*/            
+            margin: 2em;
+            height: 100%;
+            width: 100%;
+            /*width: 100em;*/
+        }
+        .Eyes {
+            top: 25em;
+            left: 43em;
+        }
+        .Noses {
+            top: 30em;
+            left: 39em;
+        }
+        .Mouths {
+            top: 40em;
+            left: 40em;
+        }
+    </style>
+</head>
+<body>
+    <br />
+    <h1>Random Art is Fun!</h1>
+    <br />
+    <br />
+    <br />
+    <div class="side">
+        <form method="post" action="/">
+            <h3>Get random head</h3>
+            <input type="submit" value="Head" name="Head" />
+            <br />
+            <h3>Choose eyes</h3>
+            <input type="submit" value="Eyes" name="Eyes" />
+            <br />
+            <h3>Choose Noses</h3>
+            <input type="submit" value="Noses" name="Noses" />
+            <br />
+            <h3>Choose Mouths</h3>
+            <input type="submit" value="Mouths" name="Mouths" />
+        </form>
+    </div>
+    <img class="Heads" src="{{url_for('static', filename=fileName)}}" />
+    <img class="Eyes" src="{{url_for('static', filename=eyesName)}}" />
+    <img class="Noses" src="{{url_for('static', filename=nosesName)}}" />
+    <img class="Mouths" src="{{url_for('static', filename=mouthsName)}}" />
+</body>
+</html>
+
+
