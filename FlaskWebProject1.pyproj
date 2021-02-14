@@ -16,6 +16,8 @@
     <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
     <Name>FlaskWebProject1</Name>
     <RootNamespace>FlaskWebProject1</RootNamespace>
+    <InterpreterId>
+    </InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -29,7 +31,23 @@
     <Compile Include="app.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="static\images\Eyes\Eyes1.jpg" />
+    <Content Include="static\images\Eyes\Eyes2.jpg" />
+    <Content Include="static\images\Eyes\Eyes3.jpg" />
+    <Content Include="static\images\Heads\Head1.jpg" />
     <Content Include="requirements.txt" />
+    <Content Include="static\images\Heads\Head2.jpg" />
+    <Content Include="static\images\Heads\Head3.jpg" />
+    <Content Include="static\images\Heads\Head4.jpg" />
+    <Content Include="templates\Main.html" />
+    <Content Include="templates\Style.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="static\images\" />
+    <Folder Include="static\images\Eyes\" />
+    <Folder Include="static\images\Heads\" />
+    <Folder Include="static\" />
+    <Folder Include="templates\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
   <!-- Specify pre- and post-build commands in the BeforeBuild and 
