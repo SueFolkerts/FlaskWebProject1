@@ -51,6 +51,7 @@
     <Content Include="static\images\Heads\Head7.jpg" />
     <Content Include="static\images\Heads\Head8.jpg" />
     <Content Include="static\images\Heads\Head9.jpg" />
+    <Content Include="static\images\Noses\Nose1.png" />
     <Content Include="templates\Main.html" />
     <Content Include="templates\Style.css" />
   </ItemGroup>
@@ -59,6 +60,7 @@
     <Folder Include="static\images\Eyes\" />
     <Folder Include="static\images\Heads\" />
     <Folder Include="static\" />
+    <Folder Include="static\images\Noses\" />
     <Folder Include="templates\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
