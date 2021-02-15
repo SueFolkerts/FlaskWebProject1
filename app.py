@@ -48,7 +48,7 @@ def SetFileName():
     fileName = r'/images/Heads/Head' + str(Head) + '.jpg'
 
 NumberHeads = 16
-NumberEyes = 16
+NumberEyes = 2
 NumberNoses = 2
 NumberMouths = 2
 

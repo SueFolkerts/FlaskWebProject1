@@ -13,26 +13,33 @@
             width: 9em;
             margin: 1em;
         }
+        .picture{
+            position:absolute;
+            top:10em;
+            left:12em;
+        }
         .Heads {
-            /*border: 5px solid black;*/
-            /*float: left;*/
+            border: 5px solid black;
+            position: absolute;
             top: 10em;
             left: 12em;
-            /*margin: 2em;*/
             height: 90em;
             width: 90em;
         }
         .Eyes {
-            top: 25em;
-            left: 43em;
+            position: absolute;
+            top: 10em;
+            left: 15em;
         }
         .Noses {
-            top: 30em;
-            left: 39em;
+            position: absolute;
+            top: 12em;
+            left: 15em;
         }
         .Mouths {
-            top: 40em;
-            left: 40em;
+            position: absolute;
+            top: 10em;
+            left: 15em;
         }
     </style>
 </head>
@@ -59,9 +66,9 @@
     </div>
     <div class="picture">
         <img class="Heads" src="{{url_for('static', filename=fileName)}}" />
-        <!--<img class="Eyes" src="{{url_for('static', filename=eyesName)}}" />
+        <img class="Eyes" src="{{url_for('static', filename=eyesName)}}" />
         <img class="Noses" src="{{url_for('static', filename=nosesName)}}" />
-        <img class="Mouths" src="{{url_for('static', filename=mouthsName)}}" />-->
+        <!--<img class="Mouths" src="{{url_for('static', filename=mouthsName)}}" />-->
     </div>
 </body>
 </html>
