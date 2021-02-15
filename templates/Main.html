@@ -14,15 +14,13 @@
             margin: 1em;
         }
         .Heads {
-            border: 5px solid black;
-            float: left;
-/*            top: 10em;
+            /*border: 5px solid black;*/
+            /*float: left;*/
+            top: 10em;
             left: 12em;
-*/            
-            margin: 2em;
-            height: 100%;
-            width: 100%;
-            /*width: 100em;*/
+            /*margin: 2em;*/
+            height: 90em;
+            width: 90em;
         }
         .Eyes {
             top: 25em;
@@ -59,10 +57,12 @@
             <input type="submit" value="Mouths" name="Mouths" />
         </form>
     </div>
-    <img class="Heads" src="{{url_for('static', filename=fileName)}}" />
-    <img class="Eyes" src="{{url_for('static', filename=eyesName)}}" />
-    <img class="Noses" src="{{url_for('static', filename=nosesName)}}" />
-    <img class="Mouths" src="{{url_for('static', filename=mouthsName)}}" />
+    <div class="picture">
+        <img class="Heads" src="{{url_for('static', filename=fileName)}}" />
+        <!--<img class="Eyes" src="{{url_for('static', filename=eyesName)}}" />
+        <img class="Noses" src="{{url_for('static', filename=nosesName)}}" />
+        <img class="Mouths" src="{{url_for('static', filename=mouthsName)}}" />-->
+    </div>
 </body>
 </html>
 

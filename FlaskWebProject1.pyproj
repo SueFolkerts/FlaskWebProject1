@@ -36,9 +36,21 @@
     <Content Include="static\images\Eyes\Eyes3.jpg" />
     <Content Include="static\images\Heads\Head1.jpg" />
     <Content Include="requirements.txt" />
+    <Content Include="static\images\Heads\Head10.jpg" />
+    <Content Include="static\images\Heads\Head11.jpg" />
+    <Content Include="static\images\Heads\Head12.jpg" />
+    <Content Include="static\images\Heads\Head13.jpg" />
+    <Content Include="static\images\Heads\Head14.jpg" />
+    <Content Include="static\images\Heads\Head15.jpg" />
+    <Content Include="static\images\Heads\Head16.jpg" />
     <Content Include="static\images\Heads\Head2.jpg" />
     <Content Include="static\images\Heads\Head3.jpg" />
     <Content Include="static\images\Heads\Head4.jpg" />
+    <Content Include="static\images\Heads\Head5.jpg" />
+    <Content Include="static\images\Heads\Head6.jpg" />
+    <Content Include="static\images\Heads\Head7.jpg" />
+    <Content Include="static\images\Heads\Head8.jpg" />
+    <Content Include="static\images\Heads\Head9.jpg" />
     <Content Include="templates\Main.html" />
     <Content Include="templates\Style.css" />
   </ItemGroup>
