@@ -16,30 +16,30 @@
         .picture{
             position:absolute;
             top:10em;
-            left:12em;
+            left:10em;
         }
         .Heads {
             border: 5px solid black;
             position: absolute;
             top: 10em;
-            left: 12em;
+            left: 10em;
             height: 90em;
             width: 90em;
         }
         .Eyes {
             position: absolute;
             top: 10em;
-            left: 15em;
+            left: 16em;
         }
         .Noses {
             position: absolute;
             top: 12em;
-            left: 15em;
+            left: 16em;
         }
         .Mouths {
             position: absolute;
-            top: 10em;
-            left: 15em;
+            top: 14em;
+            left: 16em;
         }
     </style>
 </head>
@@ -66,7 +66,7 @@
     </div>
     <div class="picture">
         <img class="Heads" src="{{url_for('static', filename=fileName)}}" />
-        <img class="Eyes" src="{{url_for('static', filename=eyesName)}}" />
+        <!--<img class="Eyes" src="{{url_for('static', filename=eyesName)}}" />-->
         <img class="Noses" src="{{url_for('static', filename=nosesName)}}" />
         <!--<img class="Mouths" src="{{url_for('static', filename=mouthsName)}}" />-->
     </div>

@@ -31,9 +31,8 @@
     <Compile Include="app.py" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="static\images\Eyes\Eyes1.jpg" />
-    <Content Include="static\images\Eyes\Eyes2.jpg" />
-    <Content Include="static\images\Eyes\Eyes3.jpg" />
+    <Content Include="static\images\Eyes\Eyes1.png" />
+    <Content Include="static\images\Eyes\Eyes2.png" />
     <Content Include="static\images\Heads\Head1.jpg" />
     <Content Include="requirements.txt" />
     <Content Include="static\images\Heads\Head10.jpg" />
@@ -52,6 +51,7 @@
     <Content Include="static\images\Heads\Head8.jpg" />
     <Content Include="static\images\Heads\Head9.jpg" />
     <Content Include="static\images\Noses\Nose1.png" />
+    <Content Include="static\images\Noses\Nose2.png" />
     <Content Include="templates\Main.html" />
     <Content Include="templates\Style.css" />
   </ItemGroup>
