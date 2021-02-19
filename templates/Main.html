@@ -33,20 +33,25 @@
         }
         .Noses {
             position: absolute;
-            top: 12em;
+            top: 10em;
             left: 16em;
         }
         .Mouths {
             position: absolute;
             top: 14em;
-            left: 16em;
+            left: 17em;
         }
+        .Ears {
+            position: absolute;
+            top: 10em;
+            left: 16em;
     </style>
 </head>
 <body>
     <br />
     <h1>Random Art is Fun!</h1>
     <br />
+    <h2>This is a work in progress!</h2>
     <br />
     <br />
     <div class="side">
@@ -62,13 +67,17 @@
             <br />
             <h3>Choose Mouths</h3>
             <input type="submit" value="Mouths" name="Mouths" />
+            <br />
+            <h3>Choose Ears</h3>
+            <input type="submit" value="Ears" name="Ears" />
         </form>
     </div>
     <div class="picture">
         <img class="Heads" src="{{url_for('static', filename=fileName)}}" />
-        <!--<img class="Eyes" src="{{url_for('static', filename=eyesName)}}" />-->
+        <img class="Eyes" src="{{url_for('static', filename=eyesName)}}" />
         <img class="Noses" src="{{url_for('static', filename=nosesName)}}" />
-        <!--<img class="Mouths" src="{{url_for('static', filename=mouthsName)}}" />-->
+        <img class="Mouths" src="{{url_for('static', filename=mouthsName)}}" />
+        <img class="Ears" src="{{url_for('static', filename=earsName)}}" />
     </div>
 </body>
 </html>

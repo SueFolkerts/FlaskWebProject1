@@ -15,6 +15,14 @@ import base64
 wsgi_app = app.wsgi_app
 
 
+def SetEarsName():
+    global mouthsName, Ears
+    newEars = Ears
+    while newEars == Ears:
+        newEars = random.randint(1,NumberEars)
+    Ears = newEars
+    mouthsName = r'/images/Ears/Ear' + str(Ears) + '.png'
+
 def SetMouthsName():
     global mouthsName, Mouths
     newMouths = Mouths
@@ -51,15 +59,18 @@ NumberHeads = 16
 NumberEyes = 2
 NumberNoses = 2
 NumberMouths = 2
+NumberEars = 2
 
 Head = random.randint(1,NumberHeads)
 Eyes = 0
 Noses = 0
 Mouths = 0
+Ears = 0
 fileName = ""
 eyesName = ""
 nosesName = ""
 mouthsName = ""
+earsName = ""
 
 @app.route('/', methods=['GET', 'POST'])
 
@@ -74,13 +85,16 @@ def art():
             SetNosesName()
         elif request.form.get('Mouths') == 'Mouths':
             SetMouthsName()
+        elif request.form.get('Ears') == 'Ears':
+            SetEarsName()
     else:
         SetFileName()
         SetEyesName()
         SetNosesName()
         SetMouthsName()
+        SetEarsName()
 
-    return render_template("Main.html", fileName = fileName, eyesName = eyesName, nosesName = nosesName, mouthsName = mouthsName)  
+    return render_template("Main.html", fileName = fileName, eyesName = eyesName, nosesName = nosesName, mouthsName = mouthsName, earsName = earsName)  
 
 
 #def contact():
