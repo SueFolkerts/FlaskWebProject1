@@ -32,6 +32,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\PublishProfiles\FTPProfile.pubxml" />
+    <Content Include="static\images\Ears\Ears1.png" />
+    <Content Include="static\images\Ears\Ears2.png" />
     <Content Include="static\images\Eyes\Eyes1.png" />
     <Content Include="static\images\Eyes\Eyes2.png" />
     <Content Include="static\images\Heads\Head1.jpg" />
@@ -54,12 +56,12 @@
     <Content Include="static\images\Noses\Nose1.png" />
     <Content Include="static\images\Noses\Nose2.png" />
     <Content Include="templates\Main.html" />
-    <Content Include="templates\Style.css" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
     <Folder Include="Properties\PublishProfiles\" />
     <Folder Include="static\images\" />
+    <Folder Include="static\images\Ears\" />
     <Folder Include="static\images\Eyes\" />
     <Folder Include="static\images\Heads\" />
     <Folder Include="static\" />
