@@ -6,7 +6,6 @@ It contains the definition of routes and views for the application.
 from flask import Flask, request
 app = Flask(__name__)
 from flask import render_template
-from PIL import Image
 import os
 import random
 import base64
@@ -16,12 +15,12 @@ wsgi_app = app.wsgi_app
 
 
 def SetEarsName():
-    global mouthsName, Ears
+    global earsName, Ears
     newEars = Ears
     while newEars == Ears:
         newEars = random.randint(1,NumberEars)
     Ears = newEars
-    mouthsName = r'/images/Ears/Ear' + str(Ears) + '.png'
+    earsName = r'/images/Ears/Ears' + str(Ears) + '.png'
 
 def SetMouthsName():
     global mouthsName, Mouths
