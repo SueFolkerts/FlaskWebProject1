@@ -15,12 +15,13 @@ wsgi_app = app.wsgi_app
 
 
 def SetEarsName():
-    global earsName, Ears
+    global earsXName,earsYName, Ears
     newEars = Ears
     while newEars == Ears:
         newEars = random.randint(1,NumberEars)
     Ears = newEars
-    earsName = r'/images/Ears/Ears' + str(Ears) + '.png'
+    earsXName = r'/images/Ears/EarsX' + str(Ears) + '.png'
+    earsYName = r'/images/Ears/EarsY' + str(Ears) + '.png'
 
 def SetMouthsName():
     global mouthsName, Mouths
@@ -50,7 +51,7 @@ def SetFileName():
     global fileName, Head
     newHead = Head
     while newHead == Head:
-        newHead = random.randint(1,NumberHeads)
+        newHead = 2  # random.randint(1,NumberHeads)
     Head = newHead
     fileName = r'/images/Heads/Head' + str(Head) + '.jpg'
 
@@ -69,8 +70,8 @@ fileName = ""
 eyesName = ""
 nosesName = ""
 mouthsName = ""
-earsName = ""
-
+earsXName = ""
+earsYName = ""
 @app.route('/', methods=['GET', 'POST'])
 
 def art():
@@ -93,7 +94,8 @@ def art():
         SetMouthsName()
         SetEarsName()
 
-    return render_template("Main.html", fileName = fileName, eyesName = eyesName, nosesName = nosesName, mouthsName = mouthsName, earsName = earsName)  
+    return render_template("Main.html", fileName = fileName, eyesName = eyesName, nosesName = nosesName, mouthsName = mouthsName, 
+                           earsXName = earsXName, earsYName = earsYName)  
 
 
 #def contact():

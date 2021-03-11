@@ -4,6 +4,22 @@
 <head>
     <meta charset="utf-8" />
     <title>Random Art</title>
+    <!--<script type="text/javascript" src="JavaScript.js"></script>-->
+    <script language="javascript">
+        function placeEarsX() {
+            //document.getElementById("test").innerHTML = "before" + document.getElementById("EarsX").style.left;
+            var head = document.getElementById("Heads").src;
+            if (head.includes('Head1.jpg')) {
+                document.getElementById("EarsX").style.left = "9em";
+                document.getElementById("EarsY").style.left = "85em";
+            } else if (head.includes('Head2.jpg')) {
+                document.getElementById("EarsX").style.left = "9em";
+                document.getElementById("EarsY").style.left = "85em";
+                document.getElementById("EarsX").style.transform = 'rotate(25deg)';
+                document.getElementById("EarsY").style.transform = 'rotate(-25deg)';
+            }
+        }
+    </script>
     <style>
         h1 {
             text-align:center;
@@ -18,7 +34,7 @@
             top:10em;
             left:10em;
         }
-        .Heads {
+        #Heads {
             border: 5px solid black;
             position: absolute;
             top: 10em;
@@ -26,25 +42,30 @@
             height: 90em;
             width: 90em;
         }
-        .Eyes {
+        #Eyes {
             position: absolute;
             top: 10em;
             left: 16em;
         }
-        .Noses {
+        #Noses {
             position: absolute;
             top: 10em;
             left: 16em;
         }
-        .Mouths {
+        #Mouths {
             position: absolute;
             top: 14em;
             left: 17em;
         }
-        .Ears {
+        #EarsX {
             position: absolute;
-            top: 10em;
+            top: 45em;
             left: 16em;
+        }
+        #EarsY {
+            position: absolute;
+            top: 45em;
+            left: 90em;
         }
     </style>
 </head>
@@ -54,6 +75,7 @@
     <br />
     <h2>This is a work in progress!</h2>
     <br />
+    <h3 id="test"></h3>
     <br />
     <div class="side">
         <form method="post" action="/">
@@ -74,11 +96,12 @@
         </form>
     </div>
     <div class="picture">
-        <img class="Heads" src="{{url_for('static', filename=fileName)}}" />
-        <img class="Eyes" src="{{url_for('static', filename=eyesName)}}" />
-        <img class="Noses" src="{{url_for('static', filename=nosesName)}}" />
-        <img class="Mouths" src="{{url_for('static', filename=mouthsName)}}" />
-        <img class="Ears" src="{{url_for('static', filename=earsName)}}" />
+        <img id="Heads" src="{{url_for('static', filename=fileName)}}" />
+        <img id="Eyes" src="{{url_for('static', filename=eyesName)}}" />
+        <img id="Noses" src="{{url_for('static', filename=nosesName)}}" />
+        <img id="Mouths" src="{{url_for('static', filename=mouthsName)}}" />
+        <img id="EarsX" src="{{url_for('static', filename=earsXName)}}" onload="placeEarsX()"/>
+        <img id="EarsY" src="{{url_for('static', filename=earsYName)}}" onload="placeEarsY()" />
     </div>
 </body>
 </html>

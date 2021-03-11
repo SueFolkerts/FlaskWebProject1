@@ -33,8 +33,13 @@
   <ItemGroup>
     <None Include="Properties\PublishProfiles\FTPProfile.pubxml" />
     <None Include="Properties\PublishProfiles\IISProfile.pubxml" />
+    <Content Include="Properties\PublishProfiles\profile.xml" />
     <Content Include="static\images\Ears\Ears1.png" />
     <Content Include="static\images\Ears\Ears2.png" />
+    <Content Include="static\images\Ears\EarsX1.png" />
+    <Content Include="static\images\Ears\EarsX2.png" />
+    <Content Include="static\images\Ears\EarsY1.png" />
+    <Content Include="static\images\Ears\EarsY2.png" />
     <Content Include="static\images\Eyes\Eyes1.png" />
     <Content Include="static\images\Eyes\Eyes2.png" />
     <Content Include="static\images\Heads\Head1.jpg" />
@@ -58,6 +63,7 @@
     <Content Include="static\images\Mouths\Mouth2.png" />
     <Content Include="static\images\Noses\Nose1.png" />
     <Content Include="static\images\Noses\Nose2.png" />
+    <Content Include="templates\JavaScript.js" />
     <Content Include="templates\Main.html" />
   </ItemGroup>
   <ItemGroup>
