@@ -13,10 +13,74 @@
                 document.getElementById("EarsX").style.left = "9em";
                 document.getElementById("EarsY").style.left = "85em";
             } else if (head.includes('Head2.jpg')) {
-                document.getElementById("EarsX").style.left = "9em";
-                document.getElementById("EarsY").style.left = "85em";
+                document.getElementById("EarsX").style.left = "10em";
+                document.getElementById("EarsX").style.top = "35em";
+                document.getElementById("EarsY").style.left = "82em";
+                document.getElementById("EarsY").style.top = "35em";
                 document.getElementById("EarsX").style.transform = 'rotate(25deg)';
                 document.getElementById("EarsY").style.transform = 'rotate(-25deg)';
+            } else if (head.includes('Head4.jpg')) {
+                document.getElementById("EarsX").style.top = "35em";
+                document.getElementById("EarsX").style.transform = 'rotate(40deg)';
+                document.getElementById("EarsY").style.top = "35em";
+                document.getElementById("EarsY").style.transform = 'rotate(-40deg)';
+            } else if (head.includes('Head5.jpg')) {
+                document.getElementById("EarsX").style.left = "8em";
+                document.getElementById("EarsX").style.top = "55em";
+                document.getElementById("EarsX").style.transform = 'rotate(-30deg)';
+                document.getElementById("EarsY").style.left = "84em";
+                document.getElementById("EarsY").style.top = "51em";
+                document.getElementById("EarsY").style.transform = 'rotate(30deg)';
+            } else if (head.includes('Head6.jpg')) {
+                document.getElementById("EarsX").style.left = "10em";
+                document.getElementById("EarsX").style.transform = 'rotate(-20deg)';
+                document.getElementById("EarsY").style.transform = 'rotate(20deg)';
+            } else if (head.includes('Head7.jpg')) {
+                document.getElementById("EarsX").style.left = "18em";
+                document.getElementById("EarsX").style.transform = 'rotate(-25deg)';
+                document.getElementById("EarsY").style.left = "79em";
+                document.getElementById("EarsY").style.transform = 'rotate(25deg)';
+            } else if (head.includes('Head8.jpg')) {
+                document.getElementById("EarsX").style.left = "5em";
+                document.getElementById("EarsX").style.top = "53em";
+                document.getElementById("EarsY").style.left = "90em";
+                document.getElementById("EarsY").style.top = "53em";
+            } else if (head.includes('Head9.jpg')) {
+                document.getElementById("EarsY").style.left = "86em";
+            } else if (head.includes('Head10.jpg')) {
+                document.getElementById("EarsX").style.left = "5em";
+                document.getElementById("EarsX").style.transform = 'rotate(20deg)';
+                document.getElementById("EarsY").style.left = "88em";
+                document.getElementById("EarsY").style.transform = 'rotate(-20deg)';
+            } else if (head.includes('Head11.jpg')) {
+                document.getElementById("EarsX").style.left = "10em";
+                document.getElementById("EarsX").style.transform = 'rotate(-20deg)';
+                document.getElementById("EarsY").style.left = "80em";
+                document.getElementById("EarsY").style.transform = 'rotate(20deg)';
+            } else if (head.includes('Head12.jpg')) {
+                document.getElementById("EarsX").style.left = "6em";
+                document.getElementById("EarsY").style.left = "88em";
+            } else if (head.includes('Head13.jpg')) {
+                document.getElementById("EarsX").style.transform = 'rotate(-20deg)';
+                document.getElementById("EarsY").style.left = "83em";
+                document.getElementById("EarsY").style.transform = 'rotate(20deg)';
+            } else if (head.includes('Head14.jpg')) {
+                document.getElementById("EarsX").style.top = "40em";
+                document.getElementById("EarsX").style.left = "22em";
+                document.getElementById("EarsY").style.top = "40em";
+                document.getElementById("EarsY").style.left = "72em";
+            } else if (head.includes('Head15.jpg')) {
+                document.getElementById("EarsX").style.left = "6em";
+                document.getElementById("EarsX").style.transform = 'rotate(26deg)';
+                document.getElementById("EarsY").style.left = "84em";
+                document.getElementById("EarsY").style.transform = 'rotate(-26deg)';
+            } else if (head.includes('Head16.jpg')) {
+                document.getElementById("EarsX").style.top = "40em";
+                document.getElementById("EarsX").style.left = "11em";
+                document.getElementById("EarsX").style.transform = 'rotate(20deg)';
+                document.getElementById("EarsY").style.top = "40em";
+                document.getElementById("EarsY").style.left = "84em";
+                document.getElementById("EarsY").style.transform = 'rotate(-20deg)';
             }
         }
     </script>
@@ -35,7 +99,9 @@
             left:10em;
         }
         #Heads {
-            border: 5px solid black;
+/*            border: 5px solid black;
+            padding: 2em;
+*/            
             position: absolute;
             top: 10em;
             left: 10em;
@@ -60,12 +126,12 @@
         #EarsX {
             position: absolute;
             top: 45em;
-            left: 16em;
+            left: 9em;
         }
         #EarsY {
             position: absolute;
             top: 45em;
-            left: 90em;
+            left: 85em;
         }
     </style>
 </head>

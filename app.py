@@ -51,7 +51,7 @@ def SetFileName():
     global fileName, Head
     newHead = Head
     while newHead == Head:
-        newHead = 2  # random.randint(1,NumberHeads)
+        newHead = random.randint(1,NumberHeads)
     Head = newHead
     fileName = r'/images/Heads/Head' + str(Head) + '.jpg'
 
