@@ -84,24 +84,20 @@
             }
         }
 
-        function printImg() {
-            const newDiv = document.createElement("div");
-            newDiv.id = "frame1";
-            newDiv.appendChild(document.getElementById("Face"));
-            let doc = document.implementation.createHTMLDocument('');
-            //Create a new HTML document.
-            doc.body.append('<html><head><title>DIV Contents</title>');
-            doc.body.append('</head><body>');
-            //Append the external CSS file.
-            doc.body.append('<link href="style.css" rel="stylesheet" type="text/css" />');
-            //Append the DIV contents.
-            doc.body.append(newDiv);
-            doc.body.append('</body></html>');
-            setTimeout(function () {
-                doc.window.frames["frame1"].focus();
-                doc.window.frames["frame1"].print();
-            }, 500);
-        }
+        function PrintDiv() {
+            var divContents = document.getElementById("Face").innerHTML;
+            var oldPage = document.body.innerHTML;
+
+            //Reset the page's HTML with div's HTML only
+            document.body.innerHTML =
+                '<html><head><style type="text/css">.picture {align-content:center;width:100px;height:100px;}</style><title></title></head><body>' +
+                divContents + "</body>";
+            console.log(document.body.innerHTML);
+            //Print Page
+            window.print();
+
+            //Restore orignal HTML
+            document.body.innerHTML = oldPage;        }  
     </script>
     <style>
                 h1 {
@@ -119,6 +115,7 @@
                     top: 10em;
                     left: 10em;
                 }
+
 
                 #Heads {
                     position: absolute;
@@ -157,12 +154,24 @@
                     top: 45em;
                     left: 85em;
                 }
+ 
+        @media print {
+            @page {
+                size: A4
+            }
 
-                @media print {
-                    .noprint {
-                        display: none;
-                    }
-                }
+            .noprint {
+                display: none;
+            }
+
+            #Face {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 50%;
+                width: 50%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -192,7 +201,7 @@
             <br />
             <br />
             <br />
-            <button class="noprint" type="button" id="btnPrint" value="Print" onclick="window.print();">Print</button>
+            <input type="button" onclick="PrintDiv();" value="Print" />
         </form>
     </div>
     <div id="Face" class="picture">
@@ -201,9 +210,8 @@
         <img id="Noses" src="{{url_for('static', filename=nosesName)}}" />
         <img id="Mouths" src="{{url_for('static', filename=mouthsName)}}" />
         <img id="EarsX" src="{{url_for('static', filename=earsXName)}}" onload="placeEars()" />
-        <img id="EarsY" src="{{url_for('static', filename=earsYName)}}" onload="placeEars()" />
+        <img id="EarsY" src="{{url_for('static', filename=earsYName)}}"  />
     </div>
-    <iframe id="theFrame" src="about:blank" />
 </body>
 </html>
 
