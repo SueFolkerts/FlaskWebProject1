@@ -6,7 +6,7 @@
     <title>Random Art</title>
     <!--<script type="text/javascript" src="JavaScript.js"></script>-->
     <script language="javascript">
-        function placeEarsX() {
+        function placeEars() {
             //document.getElementById("test").innerHTML = "before" + document.getElementById("EarsX").style.left;
             var head = document.getElementById("Heads").src;
             if (head.includes('Head1.jpg')) {
@@ -83,67 +83,97 @@
                 document.getElementById("EarsY").style.transform = 'rotate(-20deg)';
             }
         }
+
+        function printImg() {
+            const newDiv = document.createElement("div");
+            newDiv.id = "frame1";
+            newDiv.appendChild(document.getElementById("Face"));
+            let doc = document.implementation.createHTMLDocument('');
+            //Create a new HTML document.
+            doc.body.append('<html><head><title>DIV Contents</title>');
+            doc.body.append('</head><body>');
+            //Append the external CSS file.
+            doc.body.append('<link href="style.css" rel="stylesheet" type="text/css" />');
+            //Append the DIV contents.
+            doc.body.append(newDiv);
+            doc.body.append('</body></html>');
+            setTimeout(function () {
+                doc.window.frames["frame1"].focus();
+                doc.window.frames["frame1"].print();
+            }, 500);
+        }
     </script>
     <style>
-        h1 {
-            text-align:center;
-        }
-        .side {
-            float: left;
-            width: 9em;
-            margin: 1em;
-        }
-        .picture{
-            position:absolute;
-            top:10em;
-            left:10em;
-        }
-        #Heads {
-/*            border: 5px solid black;
-            padding: 2em;
-*/            
-            position: absolute;
-            top: 10em;
-            left: 10em;
-            height: 90em;
-            width: 90em;
-        }
-        #Eyes {
-            position: absolute;
-            top: 10em;
-            left: 16em;
-        }
-        #Noses {
-            position: absolute;
-            top: 10em;
-            left: 16em;
-        }
-        #Mouths {
-            position: absolute;
-            top: 14em;
-            left: 17em;
-        }
-        #EarsX {
-            position: absolute;
-            top: 45em;
-            left: 9em;
-        }
-        #EarsY {
-            position: absolute;
-            top: 45em;
-            left: 85em;
-        }
+                h1 {
+                    text-align: center;
+                }
+
+                .side {
+                    float: left;
+                    width: 9em;
+                    margin: 1em;
+                }
+
+                .picture {
+                    position: absolute;
+                    top: 10em;
+                    left: 10em;
+                }
+
+                #Heads {
+                    position: absolute;
+                    top: 10em;
+                    left: 10em;
+                    height: 90em;
+                    width: 90em;
+                }
+
+                #Eyes {
+                    position: absolute;
+                    top: 10em;
+                    left: 16em;
+                }
+
+                #Noses {
+                    position: absolute;
+                    top: 10em;
+                    left: 16em;
+                }
+
+                #Mouths {
+                    position: absolute;
+                    top: 14em;
+                    left: 17em;
+                }
+
+                #EarsX {
+                    position: absolute;
+                    top: 45em;
+                    left: 9em;
+                }
+
+                #EarsY {
+                    position: absolute;
+                    top: 45em;
+                    left: 85em;
+                }
+
+                @media print {
+                    .noprint {
+                        display: none;
+                    }
+                }
     </style>
 </head>
 <body>
     <br />
-    <h1>Random Art is Fun!</h1>
+    <h1 class="noprint">Random Art is Fun!</h1>
     <br />
-    <h2>This is a work in progress!</h2>
+    <h2 class="noprint">This is a work in progress!</h2>
     <br />
-    <h3 id="test"></h3>
+    <h3 class="noprint" id="test"></h3>
     <br />
-    <div class="side">
+    <div class="side noprint">
         <form method="post" action="/">
             <h3>Get random head</h3>
             <input type="submit" value="Head" name="Head" />
@@ -159,16 +189,21 @@
             <br />
             <h3>Choose Ears</h3>
             <input type="submit" value="Ears" name="Ears" />
+            <br />
+            <br />
+            <br />
+            <button class="noprint" type="button" id="btnPrint" value="Print" onclick="window.print();">Print</button>
         </form>
     </div>
-    <div class="picture">
+    <div id="Face" class="picture">
         <img id="Heads" src="{{url_for('static', filename=fileName)}}" />
         <img id="Eyes" src="{{url_for('static', filename=eyesName)}}" />
         <img id="Noses" src="{{url_for('static', filename=nosesName)}}" />
         <img id="Mouths" src="{{url_for('static', filename=mouthsName)}}" />
-        <img id="EarsX" src="{{url_for('static', filename=earsXName)}}" onload="placeEarsX()"/>
-        <img id="EarsY" src="{{url_for('static', filename=earsYName)}}" onload="placeEarsY()" />
+        <img id="EarsX" src="{{url_for('static', filename=earsXName)}}" onload="placeEars()" />
+        <img id="EarsY" src="{{url_for('static', filename=earsYName)}}" onload="placeEars()" />
     </div>
+    <iframe id="theFrame" src="about:blank" />
 </body>
 </html>
 

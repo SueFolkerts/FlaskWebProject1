@@ -33,6 +33,7 @@
   <ItemGroup>
     <None Include="Properties\PublishProfiles\FTPProfile.pubxml" />
     <None Include="Properties\PublishProfiles\IISProfile.pubxml" />
+    <Content Include="libman.json" />
     <Content Include="Properties\PublishProfiles\profile.xml" />
     <Content Include="static\images\Ears\Ears1.png" />
     <Content Include="static\images\Ears\Ears2.png" />
