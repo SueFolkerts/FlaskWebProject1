@@ -85,19 +85,22 @@
         }
 
         function PrintDiv() {
-            var divContents = document.getElementById("Face").innerHTML;
+            var divContents = document.getElementById("picture").innerHTML;
             var oldPage = document.body.innerHTML;
 
             //Reset the page's HTML with div's HTML only
             document.body.innerHTML =
-                '<html><head><style type="text/css">.picture {align-content:center;width:100px;height:100px;}</style><title></title></head><body>' +
+                '<html><head><style>body {align-content:center;}</style></head><body>' +
                 divContents + "</body>";
             console.log(document.body.innerHTML);
+            console.log(document.body.outerHTML);
             //Print Page
             window.print();
 
             //Restore orignal HTML
-            document.body.innerHTML = oldPage;        }  
+            document.body.innerHTML = oldPage;
+        }  
+
     </script>
     <style>
                 h1 {
@@ -110,7 +113,7 @@
                     margin: 1em;
                 }
 
-                .picture {
+                #picture {
                     position: absolute;
                     top: 10em;
                     left: 10em;
@@ -154,24 +157,21 @@
                     top: 45em;
                     left: 85em;
                 }
- 
-        @media print {
-            @page {
-                size: A4
-            }
 
-            .noprint {
-                display: none;
-            }
-
-            #Face {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                height: 50%;
-                width: 50%;
-            }
-        }
+               @media print {
+                body {
+                    position: absolute;
+                    top: 0em;
+                    left: 0em;
+/*                    transform: scale(.8);
+                    align-items: center;
+                    justify-content: left;
+                    margin: 0 auto;
+                    clear: both;
+                    display: flex;
+                    text-align: center;
+*/                }
+        }        
     </style>
 </head>
 <body>
@@ -204,13 +204,15 @@
             <input type="button" onclick="PrintDiv();" value="Print" />
         </form>
     </div>
-    <div id="Face" class="picture">
-        <img id="Heads" src="{{url_for('static', filename=fileName)}}" />
-        <img id="Eyes" src="{{url_for('static', filename=eyesName)}}" />
-        <img id="Noses" src="{{url_for('static', filename=nosesName)}}" />
-        <img id="Mouths" src="{{url_for('static', filename=mouthsName)}}" />
-        <img id="EarsX" src="{{url_for('static', filename=earsXName)}}" onload="placeEars()" />
-        <img id="EarsY" src="{{url_for('static', filename=earsYName)}}"  />
+    <div id="picture">
+        <div  id="Face">
+            <img id="Heads" src="{{url_for('static', filename=fileName)}}" />
+            <img id="Eyes" src="{{url_for('static', filename=eyesName)}}" />
+            <img id="Noses" src="{{url_for('static', filename=nosesName)}}" />
+            <img id="Mouths" src="{{url_for('static', filename=mouthsName)}}" />
+            <img id="EarsX" src="{{url_for('static', filename=earsXName)}}" onload="placeEars()" />
+            <img id="EarsY" src="{{url_for('static', filename=earsYName)}}" />
+        </div>
     </div>
 </body>
 </html>
