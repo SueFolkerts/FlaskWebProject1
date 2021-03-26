@@ -158,19 +158,18 @@
                     left: 85em;
                 }
 
+                #Hair {
+                    position: absolute;
+                    top: 10em;
+                    left: 30em;
+                }
+
                @media print {
                 body {
                     position: absolute;
                     top: 0em;
                     left: 0em;
-/*                    transform: scale(.8);
-                    align-items: center;
-                    justify-content: left;
-                    margin: 0 auto;
-                    clear: both;
-                    display: flex;
-                    text-align: center;
-*/                }
+                }
         }        
     </style>
 </head>
@@ -184,7 +183,7 @@
     <br />
     <div class="side noprint">
         <form method="post" action="/">
-            <h3>Get random head</h3>
+            <h3>Choose head</h3>
             <input type="submit" value="Head" name="Head" />
             <br />
             <h3>Choose eyes</h3>
@@ -199,19 +198,23 @@
             <h3>Choose Ears</h3>
             <input type="submit" value="Ears" name="Ears" />
             <br />
+            <h3>Choose Hair</h3>
+            <input type="submit" value="Hair" name="Hair" />
+            <br />
             <br />
             <br />
             <input type="button" onclick="PrintDiv();" value="Print" />
         </form>
     </div>
     <div id="picture">
-        <div  id="Face">
+        <div id="Face">
             <img id="Heads" src="{{url_for('static', filename=fileName)}}" />
             <img id="Eyes" src="{{url_for('static', filename=eyesName)}}" />
             <img id="Noses" src="{{url_for('static', filename=nosesName)}}" />
             <img id="Mouths" src="{{url_for('static', filename=mouthsName)}}" />
             <img id="EarsX" src="{{url_for('static', filename=earsXName)}}" onload="placeEars()" />
             <img id="EarsY" src="{{url_for('static', filename=earsYName)}}" />
+            <img id="Hair" src="{{url_for('static', filename=hairName)}}" />
         </div>
     </div>
 </body>

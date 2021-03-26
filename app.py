@@ -15,6 +15,13 @@ from win32printing import Printer
 # Make the WSGI interface available at the top level so wfastcgi can get it.
 wsgi_app = app.wsgi_app
 
+def SetHairName():
+    global hairName, Hair
+    newHair = Hair
+    while newHair == Hair:
+        newHair = random.randint(1,NumberHair)
+    Hair = newHair
+    hairName = r'/images/Hair/Hair' + str(Hair) + '.png'
 
 def SetEarsName():
     global earsXName,earsYName, Ears
@@ -62,18 +69,21 @@ NumberEyes = 2
 NumberNoses = 2
 NumberMouths = 2
 NumberEars = 2
+NumberHair = 2
 
 Head = random.randint(1,NumberHeads)
 Eyes = 0
 Noses = 0
 Mouths = 0
 Ears = 0
+Hair = 0
 fileName = ""
-eyesName = ""
-nosesName = ""
-mouthsName = ""
-earsXName = ""
-earsYName = ""
+eyesName = r'/images/NoImage.png'
+nosesName = r'/images/NoImage.png'
+mouthsName = r'/images/NoImage.png'
+earsXName = r'/images/NoImage.png'
+earsYName = r'/images/NoImage.png'
+hairName = r'/images/NoImage.png'
 @app.route('/', methods=['GET', 'POST'])
 
 def art():
@@ -89,15 +99,13 @@ def art():
             SetMouthsName()
         elif request.form.get('Ears') == 'Ears':
             SetEarsName()
+        elif request.form.get('Hair') == 'Hair':
+            SetHairName()
     else:
         SetFileName()
-        SetEyesName()
-        SetNosesName()
-        SetMouthsName()
-        SetEarsName()
 
     return render_template("Main.html", fileName = fileName, eyesName = eyesName, nosesName = nosesName, mouthsName = mouthsName, 
-                           earsXName = earsXName, earsYName = earsYName)  
+                           earsXName = earsXName, earsYName = earsYName, hairName = hairName)  
 
 
 #def contact():
