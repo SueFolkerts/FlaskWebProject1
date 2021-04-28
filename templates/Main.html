@@ -84,22 +84,22 @@
             }
         }
 
-        function PrintDiv() {
-            var divContents = document.getElementById("picture").innerHTML;
-            var oldPage = document.body.innerHTML;
+        //function PrintDiv() {
+        //    var divContents = document.getElementById("picture").innerHTML;
+        //    var oldPage = document.body.innerHTML;
 
-            //Reset the page's HTML with div's HTML only
-            document.body.innerHTML =
-                '<html><head><style>body {align-content:center;}</style></head><body>' +
-                divContents + "</body>";
-            console.log(document.body.innerHTML);
-            console.log(document.body.outerHTML);
-            //Print Page
-            window.print();
+        //    //Reset the page's HTML with div's HTML only
+        //    document.body.innerHTML =
+        //        '<html><head><style>body {align-content:center;}</style></head><body>' +
+        //        divContents + "</body>";
+        //    console.log(document.body.innerHTML);
+        //    console.log(document.body.outerHTML);
+        //    //Print Page
+        //    window.print();
 
-            //Restore orignal HTML
-            document.body.innerHTML = oldPage;
-        }  
+        //    //Restore orignal HTML
+        //    document.body.innerHTML = oldPage;
+        //}  
 
     </script>
     <style>
@@ -203,7 +203,7 @@
             <br />
             <br />
             <br />
-            <input type="button" onclick="PrintDiv();" value="Print" />
+ <!--           <input type="button" onclick="PrintDiv();" value="Print" />-->
         </form>
     </div>
     <div id="picture">
