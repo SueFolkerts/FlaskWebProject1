@@ -14,6 +14,15 @@ import base64
 
 # Make the WSGI interface available at the top level so wfastcgi can get it.
 wsgi_app = app.wsgi_app
+def ResetAll():
+    global fileName, eyesName, nosesName, mouthsName, earsXName, earsYName, hairName
+    SetFileName()
+    eyesName = r'/images/NoImage.png'
+    nosesName = r'/images/NoImage.png'
+    mouthsName = r'/images/NoImage.png'
+    earsXName = r'/images/NoImage.png'
+    earsYName = r'/images/NoImage.png'
+    hairName = r'/images/NoImage.png'
 
 def SetHairName():
     global hairName, Hair
@@ -101,6 +110,8 @@ def art():
             SetEarsName()
         elif request.form.get('Hair') == 'Hair':
             SetHairName()
+        elif request.form.get('Reset') == 'Reset':
+            ResetAll()
     else:
         SetFileName()
 
