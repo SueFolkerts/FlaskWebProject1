@@ -16,8 +16,8 @@
     <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
     <Name>FlaskWebProject1</Name>
     <RootNamespace>FlaskWebProject1</RootNamespace>
-    <InterpreterId>
-    </InterpreterId>
+    <InterpreterId>Global|PythonCore|3.6</InterpreterId>
+    <IsWindowsApplication>False</IsWindowsApplication>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -35,6 +35,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="static\JavaScript.js" />
+    <Content Include="static\styles.css" />
     <None Include="Properties\PublishProfiles\FTPProfile.pubxml" />
     <None Include="Properties\PublishProfiles\IISProfile.pubxml" />
     <Content Include="libman.json" />
@@ -70,7 +72,6 @@
     <Content Include="static\images\Mouths\Mouth2.png" />
     <Content Include="static\images\Noses\Nose1.png" />
     <Content Include="static\images\Noses\Nose2.png" />
-    <Content Include="templates\JavaScript.js" />
     <Content Include="templates\Main.html" />
   </ItemGroup>
   <ItemGroup>
@@ -84,6 +85,9 @@
     <Folder Include="static\images\Mouths\" />
     <Folder Include="static\images\Noses\" />
     <Folder Include="templates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="Global|PythonCore|3.6" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
   <!-- Specify pre- and post-build commands in the BeforeBuild and 
