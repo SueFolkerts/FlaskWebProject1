@@ -1,0 +1,218 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Random Art</title>
+    <!--<script type="text/javascript" src="JavaScript.js"></script>-->
+    <script language="javascript">
+        function placeEars() {
+            //document.getElementById("test").innerHTML = "before" + document.getElementById("EarsX").style.left;
+            var head = document.getElementById("Heads").src;
+            if (head.includes('Head1.jpg')) {
+                document.getElementById("EarsX").style.left = "9em";
+                document.getElementById("EarsY").style.left = "85em";
+            } else if (head.includes('Head2.jpg')) {
+                document.getElementById("EarsX").style.left = "10em";
+                document.getElementById("EarsX").style.top = "35em";
+                document.getElementById("EarsY").style.left = "82em";
+                document.getElementById("EarsY").style.top = "35em";
+                document.getElementById("EarsX").style.transform = 'rotate(25deg)';
+                document.getElementById("EarsY").style.transform = 'rotate(-25deg)';
+            } else if (head.includes('Head4.jpg')) {
+                document.getElementById("EarsX").style.top = "35em";
+                document.getElementById("EarsX").style.transform = 'rotate(40deg)';
+                document.getElementById("EarsY").style.top = "35em";
+                document.getElementById("EarsY").style.transform = 'rotate(-40deg)';
+            } else if (head.includes('Head5.jpg')) {
+                document.getElementById("EarsX").style.left = "8em";
+                document.getElementById("EarsX").style.top = "55em";
+                document.getElementById("EarsX").style.transform = 'rotate(-30deg)';
+                document.getElementById("EarsY").style.left = "84em";
+                document.getElementById("EarsY").style.top = "51em";
+                document.getElementById("EarsY").style.transform = 'rotate(30deg)';
+            } else if (head.includes('Head6.jpg')) {
+                document.getElementById("EarsX").style.left = "10em";
+                document.getElementById("EarsX").style.transform = 'rotate(-20deg)';
+                document.getElementById("EarsY").style.transform = 'rotate(20deg)';
+            } else if (head.includes('Head7.jpg')) {
+                document.getElementById("EarsX").style.left = "18em";
+                document.getElementById("EarsX").style.transform = 'rotate(-25deg)';
+                document.getElementById("EarsY").style.left = "79em";
+                document.getElementById("EarsY").style.transform = 'rotate(25deg)';
+            } else if (head.includes('Head8.jpg')) {
+                document.getElementById("EarsX").style.left = "5em";
+                document.getElementById("EarsX").style.top = "53em";
+                document.getElementById("EarsY").style.left = "90em";
+                document.getElementById("EarsY").style.top = "53em";
+            } else if (head.includes('Head9.jpg')) {
+                document.getElementById("EarsY").style.left = "86em";
+            } else if (head.includes('Head10.jpg')) {
+                document.getElementById("EarsX").style.left = "5em";
+                document.getElementById("EarsX").style.transform = 'rotate(20deg)';
+                document.getElementById("EarsY").style.left = "88em";
+                document.getElementById("EarsY").style.transform = 'rotate(-20deg)';
+            } else if (head.includes('Head11.jpg')) {
+                document.getElementById("EarsX").style.left = "10em";
+                document.getElementById("EarsX").style.transform = 'rotate(-20deg)';
+                document.getElementById("EarsY").style.left = "80em";
+                document.getElementById("EarsY").style.transform = 'rotate(20deg)';
+            } else if (head.includes('Head12.jpg')) {
+                document.getElementById("EarsX").style.left = "6em";
+                document.getElementById("EarsY").style.left = "88em";
+            } else if (head.includes('Head13.jpg')) {
+                document.getElementById("EarsX").style.transform = 'rotate(-20deg)';
+                document.getElementById("EarsY").style.left = "83em";
+                document.getElementById("EarsY").style.transform = 'rotate(20deg)';
+            } else if (head.includes('Head14.jpg')) {
+                document.getElementById("EarsX").style.top = "40em";
+                document.getElementById("EarsX").style.left = "22em";
+                document.getElementById("EarsY").style.top = "40em";
+                document.getElementById("EarsY").style.left = "72em";
+            } else if (head.includes('Head15.jpg')) {
+                document.getElementById("EarsX").style.left = "6em";
+                document.getElementById("EarsX").style.transform = 'rotate(26deg)';
+                document.getElementById("EarsY").style.left = "84em";
+                document.getElementById("EarsY").style.transform = 'rotate(-26deg)';
+            } else if (head.includes('Head16.jpg')) {
+                document.getElementById("EarsX").style.top = "40em";
+                document.getElementById("EarsX").style.left = "11em";
+                document.getElementById("EarsX").style.transform = 'rotate(20deg)';
+                document.getElementById("EarsY").style.top = "40em";
+                document.getElementById("EarsY").style.left = "84em";
+                document.getElementById("EarsY").style.transform = 'rotate(-20deg)';
+            }
+        }
+
+        function PrintDiv() {
+            var divContents = document.getElementById("Face").innerHTML;
+            var oldPage = document.body.innerHTML;
+
+            //Reset the page's HTML with div's HTML only
+            document.body.innerHTML =
+                '<html><head><style type="text/css">.picture {align-content:center;width:100px;height:100px;}</style><title></title></head><body>' +
+                divContents + "</body>";
+            console.log(document.body.innerHTML);
+            //Print Page
+            window.print();
+
+            //Restore orignal HTML
+            document.body.innerHTML = oldPage;        }  
+    </script>
+    <style>
+                h1 {
+                    text-align: center;
+                }
+
+                .side {
+                    float: left;
+                    width: 9em;
+                    margin: 1em;
+                }
+
+                .picture {
+                    position: absolute;
+                    top: 10em;
+                    left: 10em;
+                }
+
+
+                #Heads {
+                    position: absolute;
+                    top: 10em;
+                    left: 10em;
+                    height: 90em;
+                    width: 90em;
+                }
+
+                #Eyes {
+                    position: absolute;
+                    top: 10em;
+                    left: 16em;
+                }
+
+                #Noses {
+                    position: absolute;
+                    top: 10em;
+                    left: 16em;
+                }
+
+                #Mouths {
+                    position: absolute;
+                    top: 14em;
+                    left: 17em;
+                }
+
+                #EarsX {
+                    position: absolute;
+                    top: 45em;
+                    left: 9em;
+                }
+
+                #EarsY {
+                    position: absolute;
+                    top: 45em;
+                    left: 85em;
+                }
+ 
+        @media print {
+            @page {
+                size: A4
+            }
+
+            .noprint {
+                display: none;
+            }
+
+            #Face {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 50%;
+                width: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <br />
+    <h1 class="noprint">Random Art is Fun!</h1>
+    <br />
+    <h2 class="noprint">This is a work in progress!</h2>
+    <br />
+    <h3 class="noprint" id="test"></h3>
+    <br />
+    <div class="side noprint">
+        <form method="post" action="/">
+            <h3>Get random head</h3>
+            <input type="submit" value="Head" name="Head" />
+            <br />
+            <h3>Choose eyes</h3>
+            <input type="submit" value="Eyes" name="Eyes" />
+            <br />
+            <h3>Choose Noses</h3>
+            <input type="submit" value="Noses" name="Noses" />
+            <br />
+            <h3>Choose Mouths</h3>
+            <input type="submit" value="Mouths" name="Mouths" />
+            <br />
+            <h3>Choose Ears</h3>
+            <input type="submit" value="Ears" name="Ears" />
+            <br />
+            <br />
+            <br />
+            <input type="button" onclick="PrintDiv();" value="Print" />
+        </form>
+    </div>
+    <div id="Face" class="picture">
+        <img id="Heads" src="{{url_for('static', filename=fileName)}}" />
+        <img id="Eyes" src="{{url_for('static', filename=eyesName)}}" />
+        <img id="Noses" src="{{url_for('static', filename=nosesName)}}" />
+        <img id="Mouths" src="{{url_for('static', filename=mouthsName)}}" />
+        <img id="EarsX" src="{{url_for('static', filename=earsXName)}}" onload="placeEars()" />
+        <img id="EarsY" src="{{url_for('static', filename=earsYName)}}"  />
+    </div>
+</body>
+</html>
+
+

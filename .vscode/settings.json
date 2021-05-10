@@ -1,0 +1,5 @@
+{
+    "appService.showBuildDuringDeployPrompt": false,
+    "appService.defaultWebAppToDeploy": "/subscriptions/a4dba93a-4a01-4ef4-a7b0-dd009cecc82a/resourceGroups/RandomArtFun/providers/Microsoft.Web/sites/RandomArtFun",
+    "appService.deploySubpath": "."
+}
