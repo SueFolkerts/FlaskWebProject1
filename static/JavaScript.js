@@ -81,21 +81,39 @@
             }
         }
 
-        //function PrintDiv() {
-        //    var divContents = document.getElementById("picture").innerHTML;
-        //    var oldPage = document.body.innerHTML;
+        function PrintDiv() {
+            var divContents = document.getElementById("picture").innerHTML;
+            var oldPage = document.body.innerHTML;
 
-        //    //Reset the page's HTML with div's HTML only
-        //    document.body.innerHTML =
-        //        '<html><head><style>body {align - content:center;}</style></head><body>' +
-        //        divContents + "</body>";
-        //    console.log(document.body.innerHTML);
-        //    console.log(document.body.outerHTML);
-        //    //Print Page
-        //    window.print();
+            //Reset the page's HTML with div's HTML only
+            document.body.innerHTML =
+                '<html><head><style>body {width=20em;}</style></head><body>' +
+                divContents + "</body>";
+            console.log(document.body.innerHTML);
+            console.log(document.body.outerHTML);
+            //Print Page
+            window.print();
 
-        //    //Restore orignal HTML
-        //    document.body.innerHTML = oldPage;
-        //}
+            //Restore orignal HTML
+            document.body.innerHTML = oldPage;
+        }
+//function printImg() {
+//    const newDiv = document.createElement("div");
+//    newDiv.id = "frame1";
+//    newDiv.appendChild(document.getElementById("Face"));
+//    let doc = document.implementation.createHTMLDocument('');
+//    //Create a new HTML document.
+//    doc.body.append('<html><head><title>DIV Contents</title>');
+//    doc.body.append('</head><body>');
+//    //Append the external CSS file.
+//    doc.body.append('<link href="style.css" rel="stylesheet" type="text/css" />');
+//    //Append the DIV contents.
+//    doc.body.append(newDiv);
+//    doc.body.append('</body></html>');
+//    setTimeout(function () {
+//        doc.window.frames["frame1"].focus();
+//        doc.window.frames["frame1"].print();
+//    }, 500);
+//}
 
 

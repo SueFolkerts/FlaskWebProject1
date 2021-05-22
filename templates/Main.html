@@ -3,7 +3,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title>Random Art</title>
+    <title class="title">Random Art</title>
     <link rel="stylesheet" type="text/css" href="/static/styles.css">
     <script type="text/javascript" src="/static/JavaScript.js"></script>
 </head>
@@ -17,40 +17,35 @@
     <br />
     <div class="side noprint">
         <form method="post" action="/">
-            <h3>Choose head</h3>
-            <input type="submit" value="Head" name="Head" />
-            <br />
-            <br />
-            <br />
-            <h3>Choose eyes</h3>
-            <input type="submit" value="Eyes" name="Eyes" />
-            <br />
-            <br />
-            <br />
-            <h3>Choose Noses</h3>
-            <input type="submit" value="Noses" name="Noses" />
-            <br />
-            <br />
-            <br />
-            <h3>Choose Mouths</h3>
-            <input type="submit" value="Mouths" name="Mouths" />
-            <br />
-            <br />
-            <br />
-            <h3>Choose Ears</h3>
-            <input type="submit" value="Ears" name="Ears" />
-            <br />
-            <br />
-            <br />
-            <h3>Choose Hair</h3>
-            <input type="submit" value="Hair" name="Hair" />
-            <br />
-            <br />
-            <br />
-            <h3>Start Over</h3>
-            <input type="submit" value="Reset" name="Reset" />
-            <br />
-            <!--           <input type="button" onclick="PrintDiv();" value="Print" />-->
+            <h3>
+                Choose
+                <input type="submit" value="Head" name="Head" />
+            </h3>
+            <h3>
+                Choose
+                <input type="submit" value="Eyes" name="Eyes" />
+            </h3>
+            <h3>
+                Choose
+                <input type="submit" value="Noses" name="Noses" />
+            </h3>
+            <h3>
+                Choose
+                <input type="submit" value="Mouths" name="Mouths" />
+            </h3>
+            <h3>
+                Choose
+                <input type="submit" value="Ears" name="Ears" />
+            </h3>
+            <h3>
+                Choose
+                <input type="submit" value="Hair" name="Hair" />
+            </h3>
+            <h3>
+                Try Again
+                <input type="submit" value="Reset" name="Reset" />
+            </h3>
+            <button class="noprint" type="button" id="btnPrint" value="Print" onclick="PrintDiv();">Print</button>
         </form>
     </div>
     <div id="picture">

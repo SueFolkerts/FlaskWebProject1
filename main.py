@@ -9,7 +9,7 @@ from flask import render_template
 import os
 import random
 import base64
-#from win32printing import Printer
+from win32printing import Printer
 
 
 # Make the WSGI interface available at the top level so wfastcgi can get it.
