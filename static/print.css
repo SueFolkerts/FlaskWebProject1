@@ -1,0 +1,68 @@
+﻿@media print {
+    body {
+        position: absolute;
+        top: 0em;
+        left: 0em;
+        width: 50em;
+        align-content: center;
+        color: blue;
+        background-color: lightgreen;
+    }
+
+    @page {
+        size: A4 portrait;
+    }
+}
+
+#picture {
+    position: absolute;
+    top: 10em;
+    left: 10em;
+}
+
+
+#Heads {
+    position: absolute;
+    top: 10em;
+    left: 10em;
+    height: 90em;
+    width: 90em;
+}
+
+#Eyes {
+    position: absolute;
+    top: 10em;
+    left: 16em;
+}
+
+#Noses {
+    position: absolute;
+    top: 10em;
+    left: 16em;
+}
+
+#Mouths {
+    position: absolute;
+    top: 14em;
+    left: 17em;
+}
+
+#EarsX {
+    position: absolute;
+    top: 45em;
+    left: 9em;
+}
+
+#EarsY {
+    position: absolute;
+    top: 45em;
+    left: 85em;
+}
+
+#Hair {
+    position: absolute;
+    top: 10em;
+    left: 30em;
+}
+
+

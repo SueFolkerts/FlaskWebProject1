@@ -80,15 +80,4 @@ input, button {
     left: 30em;
 }
 
-@media print {
-    body {
-        position: absolute;
-        top: 0em;
-        left: 0em;
-        width:100em;
-        align-content:center;
-    }
-    @page {
-        size: A4 portrait;
-    }
-}
+

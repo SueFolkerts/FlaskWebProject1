@@ -36,7 +36,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="static\JavaScript.js" />
-    <Content Include="static\styles.css" />
+    <Content Include="static\print.css" />
     <None Include="Properties\PublishProfiles\FTPProfile.pubxml" />
     <None Include="Properties\PublishProfiles\IISProfile.pubxml" />
     <Content Include="libman.json" />
@@ -72,6 +72,7 @@
     <Content Include="static\images\Mouths\Mouth2.png" />
     <Content Include="static\images\Noses\Nose1.png" />
     <Content Include="static\images\Noses\Nose2.png" />
+    <Content Include="static\styles.css" />
     <Content Include="templates\Main.html" />
   </ItemGroup>
   <ItemGroup>
