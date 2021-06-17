@@ -87,12 +87,19 @@
             divContents = divContents.replace("</body>", "")
             console.log(divContents);
             //Reset the page's HTML with div's HTML only
-            var newContent = '<head><style><link rel="stylesheet" media="print" href="/static/print.css"></style></head><body>' + divContents + '</body>';
+            var newContent = '<head><style type="text/css">@media print {';
+            newContent = newContent + ' #Heads {position: absolute;top: 0em;left: 0em;height: 90em;width: 70em;}'
+            newContent = newContent + ' #Eyes {position: absolute;top: 0em;left: 0em;}'
+            newContent = newContent + ' #Noses {position: absolute;top: 0em;left: 0em;}'
+            newContent = newContent + ' #Mouths {position: absolute;top: 4em;left: 0em;}'
+            newContent = newContent + ' #EarsX {position: absolute;top: 35em;left: 0em;}'
+            newContent = newContent + ' #EarsY {position: absolute;top: 35em;left: 65em;}'
+            newContent = newContent + ' #Hair {position: absolute;top: 0em;left: 10em;}}'
+            newContent = newContent + '</style ></head > <body>' + divContents + '</body>';
             document.open();
             document.write(newContent);
             document.close();
-            console.log(document.head);
-            console.log(document.body);
+            console.log(newContent);
             //Print Page
             window.print();
 
