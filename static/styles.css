@@ -1,83 +1,293 @@
-﻿
-h1 {
-    text-align: center;
+﻿@media print {
+    body {
+        position: absolute;
+        top: 0em;
+        left: 0em;
+        width: 50em;
+        align-content: center;
+    }
+
+    .noprint {
+        display: none !important;
+    }
+
+    .side {
+        display: none !important;
+        width: 0px;
+    }
+
+    #picture {
+        position: absolute;
+        top: 0em;
+        left: 0em;
+    }
+
+
+    #Heads {
+        position: absolute;
+        top: 10em;
+        left: 0em;
+        height: 90em;
+        width: 90em;
+    }
+
+    #Eyes {
+        position: absolute;
+        top: 10em;
+        left: 10em;
+    }
+
+    #Noses {
+        position: absolute;
+        top: 10em;
+        left: 10em;
+    }
+
+    #Mouths {
+        position: absolute;
+        top: 14em;
+        left: 11em;
+    }
+
+    #EarsX {
+        position: absolute;
+        top: 45em;
+        left: -30em;
+    }
+
+    #EarsY {
+        position: absolute;
+        top: 45em;
+        left: 25em;
+    }
+
+    #Hair {
+        position: absolute;
+        top: 10em;
+        left: 20em;
+    }
 }
+@media screen {
+    h1 {
+        text-align: center;
+    }
 
-form {
-    font-size: 1.5em;
-    width: 30%;
-    white-space: nowrap;
+    form {
+        font-size: 1.5em;
+        width: 30%;
+        white-space: nowrap;
+    }
+
+    input, button {
+        background-color: #A0A0A0;
+        border-color: black;
+        box-shadow: .1em .1em #505050;
+        color: white;
+        padding: .5em 1em;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 1em;
+        margin: .5em .25em;
+        cursor: pointer;
+    }
+
+    .side {
+        float: left;
+        width: 9em;
+        margin: 1em;
+    }
+
+    #picture {
+        position: absolute;
+        top: 10em;
+        left: 10em;
+    }
+
+
+    #Heads {
+        position: absolute;
+        top: 10em;
+        left: 10em;
+        height: 90em;
+        width: 90em;
+    }
+
+    #Eyes {
+        position: absolute;
+        top: 10em;
+        left: 16em;
+    }
+
+    #Noses {
+        position: absolute;
+        top: 10em;
+        left: 16em;
+    }
+
+    #Mouths {
+        position: absolute;
+        top: 14em;
+        left: 17em;
+    }
+
+    #EarsX {
+        position: absolute;
+        top: 45em;
+        left: 9em;
+    }
+
+    #EarsY {
+        position: absolute;
+        top: 45em;
+        left: 85em;
+    }
+
+    .Head1X {
+    }
+
+    .Head1Y {
+    }
+
+    .Head2X {
+        top: 35em;
+        transform: rotate(25deg);
+    }
+
+    .Head2Y {
+        top: 35em;
+        left: 82em;
+        transform: rotate(-25deg);
+    }
+
+    .Head3X {
+    }
+
+    .Head3Y {
+    }
+
+    .Head4X {
+        transform: rotate(40deg);
+    }
+
+    .Head4Y {
+        top: 35em;
+        transform: rotate(-40deg);
+    }
+
+    .Head5X {
+        top: 55em;
+        left: 9em;
+        transform: rotate(-30deg);
+    }
+
+    .Head5Y {
+        top: 51em;
+        left: 84em;
+        transform: rotate(30deg);
+    }
+
+    .Head6X {
+        transform: rotate(-20deg);
+    }
+
+    .Head6Y {
+        transform: rotate(20deg);
+    }
+
+    .Head7X {
+        transform: rotate(-25deg);
+    }
+
+    .Head7Y {
+        left: 79em;
+        transform: rotate(25deg);
+    }
+
+    .Head8X {
+        top: 53em;
+    }
+
+    .Head8Y {
+        top: 53em;
+        left: 90em;
+    }
+
+    .Head9X {
+    }
+
+    .Head9Y {
+        left: 86em;
+    }
+
+    .Head10X {
+        transform: rotate(20deg);
+    }
+
+    .Head10Y {
+        left: 88em;
+        transform: rotate(-20deg);
+    }
+
+    .Head11X {
+        transform: rotate(-20deg);
+    }
+
+    .Head11Y {
+        left: 80em;
+        transform: rotate(20deg);
+    }
+
+    .Head12X {
+        left: 6em;
+    }
+
+    .Head12Y {
+        left: 88em;
+    }
+
+    .Head13X {
+        transform: rotate(-20deg);
+    }
+
+    .Head13Y {
+        transform: rotate(20deg);
+        left: 83em;
+    }
+
+    .Head14X {
+        left: 22em;
+    }
+
+    .Head14Y {
+        top: 40em;
+        left: 72em;
+    }
+
+    .Head15X {
+        transform: rotate(26deg);
+    }
+
+    .Head15Y {
+        left: 84em;
+        transform: rotate(-26deg);
+    }
+
+    .Head16X {
+        top: 40em;
+        left: 11em;
+        transform: rotate(20deg);
+    }
+
+    .Head16Y {
+        top: 40em;
+        left: 84em;
+        transform: rotate(-20deg);
+    }
+
+    #Hair {
+        position: absolute;
+        top: 10em;
+        left: 30em;
+    }
 }
-
-input, button {
-    background-color: #A0A0A0;
-    border-color: black;
-    box-shadow: .1em .1em #505050;
-    color: white;
-    padding: .5em 1em;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1em;
-    margin: .5em .25em;
-    cursor: pointer;
-}
-
-.side {
-    float: left;
-    width: 9em;
-    margin: 1em;
-}
-
-#picture {
-    position: absolute;
-    top: 10em;
-    left: 10em;
-}
-
-
-#Heads {
-    position: absolute;
-    top: 10em;
-    left: 10em;
-    height: 90em;
-    width: 90em;
-}
-
-#Eyes {
-    position: absolute;
-    top: 10em;
-    left: 16em;
-}
-
-#Noses {
-    position: absolute;
-    top: 10em;
-    left: 16em;
-}
-
-#Mouths {
-    position: absolute;
-    top: 14em;
-    left: 17em;
-}
-
-#EarsX {
-    position: absolute;
-    top: 45em;
-    left: 9em;
-}
-
-#EarsY {
-    position: absolute;
-    top: 45em;
-    left: 85em;
-}
-
-#Hair {
-    position: absolute;
-    top: 10em;
-    left: 30em;
-}
-
-

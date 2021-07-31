@@ -66,11 +66,12 @@ def SetEyesName():
 
 def SetFileName():
     global fileName, Head
-    newHead = Head
-    while newHead == Head:
-        newHead = random.randint(1,NumberHeads)
-    Head = newHead
-    fileName = r'images/Heads/Head' + str(Head) + '.jpg'
+    if fileName == "":
+        newHead = Head
+        while newHead == Head:
+            newHead = random.randint(1,NumberHeads)
+        Head = newHead
+        fileName = r'images/Heads/Head' + str(Head) + '.jpg'
 
 NumberHeads = 16
 NumberEyes = 2
@@ -98,6 +99,7 @@ def art():
     global fileName
     if request.method == 'POST':
         if request.form.get('Head') == 'Head':
+            fileName = ""
             SetFileName()
         elif request.form.get('Eyes') == 'Eyes':
             SetEyesName()
